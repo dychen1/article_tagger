@@ -49,7 +49,7 @@ def parse_searched(db_utils: DatabaseUtilities, searched: Dict[str, Any]) -> Lis
             return []
         elif article_ids:
             # Get intersection
-            article_ids = list(set(article_ids) & set(tag_searched_ids))
+            article_ids = list(set(article_ids) & set(entity_searched_ids))
             if not article_ids:
                 # No common articles between search criteria
                 return []
